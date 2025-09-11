@@ -1,14 +1,7 @@
-import Footer from '@/components/footer/Footer'
-import Navbar from '@/components/navbar/Navbar'
-import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      {/* <Navbar /> */}
-      <h1>This is Home Page</h1>
-      {/* <Footer /> */}
-    </div>
+    <div>page</div>
   )
 }
 
