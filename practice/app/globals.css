@@ -1,5 +1,13 @@
 @import "tailwindcss";
-
+*{
+  font-family: cursive;
+}
+h1{
+  color: orange;
+  padding: 10px 10px;
+  font-size: 70px;
+  text-decoration: dashed;
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;

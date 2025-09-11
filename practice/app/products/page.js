@@ -5,9 +5,8 @@ import React from 'react'
 const page = () => {
   return (
     <div>
-      {/* <Navbar /> */}
-      <h1>This is Home Page</h1>
-      {/* <Footer /> */}
+        
+        <h1> This Is Products Page</h1>
     </div>
   )
 }
