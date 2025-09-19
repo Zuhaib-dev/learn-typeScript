@@ -1,6 +1,7 @@
 import axios from "./services/apiConfig";
 import React, { useEffect, useState } from "react";
 import Card from "./components/Card";
+import { toast } from "react-toastify";
 
 const App = () => {
   const [data, setdata] = useState([]);
@@ -8,6 +9,9 @@ const App = () => {
     try {
       const response = await axios.get("/products");
       setdata(response.data);
+      setTimeout(() => {
+        toast.success("Data Fetched ");
+      }, 1000);
     } catch (error) {
       console.log(error);
     }
