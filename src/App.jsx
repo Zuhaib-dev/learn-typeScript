@@ -1,27 +1,12 @@
-import React, { useState } from "react";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 const App = () => {
-  const [username, setusername] = useState("");
-  const submit = (e) => {
-    e.preventDefault();
-    console.log(username);
-    setusername("");
-  };
-  return (
-    <div>
-      <form onSubmit={submit}>
-        <input
-          value={username}
-          onChange={(e) => {
-            setusername(e.target.value);
-          }}
-          type="text"
-          placeholder="userName"
-        />
-        <button>Submit</button>
-      </form>
-    </div>
-  );
+  return <>
+  <Navbar />
+  <Footer />
+  </>;
+
 };
 
 export default App;
