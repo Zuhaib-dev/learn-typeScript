@@ -8,7 +8,6 @@ const App = () => {
     try {
       const response = await axios.get("https://fakestoreapi.com/products");
       setdata(response.data);
-      console.log(data);
     } catch (error) {
       console.log(error);
     }
@@ -19,18 +18,16 @@ const App = () => {
   return (
     <div>
       <>
-        <h1 className="flex justify-center text-3xl mt-10">
-          List Of All Products
-        </h1>
+        <h1 className="flex justify-center text-3xl mt-10">List Of Products</h1>
         <div className="flex flex-wrap px-10">
           {data.map(function (elem, idx) {
             return (
               <Card
                 key={idx}
-                image={elem.image}
                 name={elem.title}
-                category={elem.category}
                 price={elem.price}
+                category={elem.category}
+                image={elem.image}
               />
             );
           })}
