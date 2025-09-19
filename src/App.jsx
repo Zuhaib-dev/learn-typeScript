@@ -1,12 +1,14 @@
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+
+import Card from './components/Card'
 
 const App = () => {
-  return <>
-  <Navbar />
-  <Footer />
-  </>;
+  const userName = "Zuhaib"
+  return (
+    <>
+      <Card user={userName} age="17" city="Srinager" />
+      
+    </>
+  )
+}
 
-};
-
-export default App;
+export default App
