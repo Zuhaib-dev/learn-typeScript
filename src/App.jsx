@@ -1,14 +1,43 @@
-
-import Card from './components/Card'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import Card from "./components/Card";
 
 const App = () => {
-  const userName = "Zuhaib"
+  const [data, setdata] = useState([]);
+  const getData = async () => {
+    try {
+      const response = await axios.get("https://fakestoreapi.com/products");
+      setdata(response.data);
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    getData();
+  }, []);
   return (
-    <>
-      <Card user={userName} age="17" city="Srinager" />
-      
-    </>
-  )
-}
+    <div>
+      <>
+        <h1 className="flex justify-center text-3xl mt-10">
+          List Of All Products
+        </h1>
+        <div className="flex flex-wrap px-10">
+          {data.map(function (elem, idx) {
+            return (
+              <Card
+                key={idx}
+                image={elem.image}
+                name={elem.title}
+                category={elem.category}
+                price={elem.price}
+              />
+            );
+          })}
+        </div>
+      </>
+    </div>
+  );
+};
 
-export default App
+export default App;

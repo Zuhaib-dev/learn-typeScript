@@ -1,5 +1,7 @@
 @import "tailwindcss";
-
+*{
+    font-family: cursive;
+}
 
 html, body {
   width: 100%;
