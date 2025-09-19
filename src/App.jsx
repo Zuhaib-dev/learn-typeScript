@@ -14,6 +14,7 @@ const App = () => {
       }, 1000);
     } catch (error) {
       console.log(error);
+      toast.error("Data not Fetched")
     }
   };
   useEffect(() => {
