@@ -4,6 +4,7 @@ import Products from '../pages/Products'
 import { Route, Routes } from 'react-router-dom'
 import Users from '../pages/Users'
 import Anime from '../pages/Anime'
+import Memes from '../pages/Memes'
 
 
 const MainRoutes = () => {
@@ -13,6 +14,7 @@ const MainRoutes = () => {
         <Route path='/products' element={<Products />}  />
         <Route path='/users' element={<Users />}  />
         <Route path='/anime' element={<Anime />}  />
+        <Route path='/memes' element={<Memes />}  />
     </Routes>
   )
 }
