@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
 import Axios from "../services/apiConfig";
 import Card from "../components/Card";
+import { toast } from "react-toastify";
 const Products = () => {
   const [data, setdata] = useState([]);
   const getData = async () => {
     try {
       const response = await Axios.get("/products");
       setdata(response.data);
+      setTimeout(() => {
+        toast.success('Data Fetched✔')
+      }, 1500);
     } catch (error) {
       console.log(error);
     }
