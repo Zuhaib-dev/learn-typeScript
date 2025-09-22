@@ -9,9 +9,7 @@ const Home = () => {
     try {
       const response = await axios.get("https://picsum.photos/v2/list");
       setdata(response.data);
-      setTimeout(() => {
-        toast.success("Data Fetched");
-      }, 1000);
+      
     } catch (error) {
       console.log(error);
       toast.error(error);

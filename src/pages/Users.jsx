@@ -8,9 +8,7 @@ const Users = () => {
     try {
       const response = await axios.get("/users");
       setuser(response.data);
-      setTimeout(() => {
-        toast.success("Data Fetched")
-      }, 1000);
+      
     } catch (error) {
       console.log(error);
       toast.error(error);

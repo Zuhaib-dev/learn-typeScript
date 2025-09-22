@@ -8,11 +8,9 @@ const Products = () => {
     try {
       const response = await Axios.get("/products");
       setdata(response.data);
-      setTimeout(() => {
-        toast.success('Data Fetched✔')
-      }, 1500);
     } catch (error) {
       console.log(error);
+      toast.error(error);
     }
   };
   useEffect(() => {
