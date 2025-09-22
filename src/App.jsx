@@ -1,10 +1,8 @@
-import React, { useContext } from 'react'
-import { DataContext } from './context/UserContext'
+import React from 'react'
 
 const App = () => {
-  const userName = useContext(DataContext)
   return (
-    <div>App {userName}</div>
+    <div>App</div>
   )
 }
 
