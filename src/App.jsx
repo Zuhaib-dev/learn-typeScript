@@ -1,16 +1,11 @@
-import React from "react";
-import MainRoutes from "./routes/MainRoutes";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import React, { useContext } from 'react'
+import { DataContext } from './context/UserContext'
 
 const App = () => {
+  const userName = useContext(DataContext)
   return (
-    <div className="w-screen h-screen px-30 text-2xl">
-      <Navbar />
-      <MainRoutes />
-      <Footer />
-    </div>
-  );
-};
+    <div>App {userName}</div>
+  )
+}
 
-export default App;
+export default App
