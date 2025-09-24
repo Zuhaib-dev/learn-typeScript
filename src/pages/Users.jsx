@@ -18,9 +18,9 @@ const Users = () => {
     getData();
   }, []);
   return (
-    <div>
-      <h1>ALL Users</h1>
-      <div>
+    <div >
+      <h1 className="text-xl flex justify-center mt-6 mb-3">ALL Users</h1>
+      <div className="flex flex-wrap gap-10 px-10">
         {data.map(function (item, idx) {
           return (
             <UserCard
