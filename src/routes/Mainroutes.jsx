@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Products from "../pages/Products";
 import PageNotFound from "../pages/PageNotFound";
 import Users from "../pages/Users";
+import Weather from "../pages/Weather";
 
 const Mainroutes = () => {
   return (
@@ -11,6 +12,7 @@ const Mainroutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/products" element={<Products />} />
       <Route path="/users" element={<Users />} />
+      <Route path="/weather" element={<Weather />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
