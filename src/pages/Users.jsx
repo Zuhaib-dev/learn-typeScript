@@ -1,39 +1,9 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import UserCard from "../components/UserCard";
+import React from 'react'
 
 const Users = () => {
-  const [data, setdata] = useState([]);
-  const getData = async () => {
-    try {
-      const response = await axios.get(
-        "https://picsum.photos/v2/list?page=2&limit=100"
-      );
-      setdata(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    getData();
-  }, []);
   return (
-    <div >
-      <h1 className="text-xl flex justify-center mt-6 mb-3">ALL Users</h1>
-      <div className="flex flex-wrap gap-10 px-10">
-        {data.map(function (item, idx) {
-          return (
-            <UserCard
-              key={idx}
-              name={item.author}
-              image={item.download_url}
-              price={item.id}
-            />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
+    <div>Users</div>
+  )
+}
 
-export default Users;
+export default Users
