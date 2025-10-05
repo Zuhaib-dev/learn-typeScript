@@ -19,6 +19,12 @@ const Navbar = () => {
       >
         Users
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/anime"}
+      >
+        Animes
+      </NavLink>
     </div>
   );
 };
