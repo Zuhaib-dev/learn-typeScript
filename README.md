@@ -15,3 +15,4 @@ If you are developing a production application, we recommend using TypeScript wi
 hey make a project to get over react 
 just kidding
 just maintaining streaks 
+Preparing React interview questions for an interview and then will move to the js part amd them to css and so on
