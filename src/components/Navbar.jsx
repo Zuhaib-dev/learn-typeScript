@@ -25,6 +25,12 @@ const Navbar = () => {
       >
         Animes
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/jokes"}
+      >
+        Jokes
+      </NavLink>
     </div>
   );
 };
