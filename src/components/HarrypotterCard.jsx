@@ -19,7 +19,7 @@ const HarryPotterCard = ({
   return (
     <div className="max-w-sm mx-auto bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 shadow-xl rounded-xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
       <img
-        src={image}
+        src={image || "https://images.unsplash.com/photo-1746278169792-496874fccc11?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3MHx8fGVufDB8fHx8fA%3D%3D"}
         alt={name}
         className="w-full h-72 object-cover object-top"
       />

@@ -35,6 +35,10 @@ const HarryPotter = () => {
               actor={elem.actor}
               alive={elem.alive}
               wand={elem.wand}
+              hairColour={elem.hairColour}
+              eyeColour={elem.eyeColour}
+              patronus={elem.patronus}
+              house={elem.house}
             />
           );
         })}
