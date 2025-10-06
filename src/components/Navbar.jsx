@@ -37,6 +37,12 @@ const Navbar = () => {
       >
         Burger
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/breakingbad"}
+      >
+        Breaking Bad
+      </NavLink>
     </div>
   );
 };
