@@ -49,6 +49,12 @@ const Navbar = () => {
       >
         Harry Potter
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/got"}
+      >
+        GOT
+      </NavLink>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import Joke from '../pages/Joke'
 import Burger from '../pages/Burger'
 import BreakingBad from '../pages/BreakingBad'
 import HarryPotter from '../pages/HarryPotter'
+import GameOfThrones from '../pages/GameOfThrones'
 
 const MainRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const MainRoutes = () => {
       <Route path="/burger" element={<Burger />} />
       <Route path="/breakingbad" element={<BreakingBad />} />
       <Route path="/Harrypotter" element={<HarryPotter />} />
+      <Route path="/got" element={<GameOfThrones />} />
     </Routes>
   )
 }
