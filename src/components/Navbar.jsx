@@ -55,6 +55,12 @@ const Navbar = () => {
       >
         GOT
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/memes"}
+      >
+        Memes
+      </NavLink>
     </div>
   );
 };

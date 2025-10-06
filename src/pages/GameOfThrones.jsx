@@ -24,7 +24,7 @@ const GameOfThrones = () => {
         Game Of Thrones
       </h1>
       <h2 className="flex justify-center text-2xl from-neutral-200">All Charecters</h2>
-      <div className="flex flex-wrap px-20">
+      <div className="flex flex-wrap px-20 gap-4">
         {data.map(function (elem, idx) {
           return (
             <GotCard
