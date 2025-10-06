@@ -5,6 +5,7 @@ import Products from '../pages/Products'
 import Users from '../pages/Users'
 import Anime from '../pages/Anime'
 import Joke from '../pages/Joke'
+import Burger from '../pages/Burger'
 
 const MainRoutes = () => {
   return (
@@ -14,6 +15,7 @@ const MainRoutes = () => {
       <Route path="/users" element={<Users />} />
       <Route path="/anime" element={<Anime />} />
       <Route path="/jokes" element={<Joke />} />
+      <Route path="/burger" element={<Burger />} />
     </Routes>
   )
 }

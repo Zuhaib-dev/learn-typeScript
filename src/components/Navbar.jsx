@@ -31,6 +31,12 @@ const Navbar = () => {
       >
         Jokes
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/burger"}
+      >
+        Burger
+      </NavLink>
     </div>
   );
 };
