@@ -1,15 +1,15 @@
-import React from 'react';
+import React from "react";
 
 const categoryIcons = {
-  Pun: '🧠',
-  Programming: '💻',
-  Misc: '🎲',
-  Dark: '🌑',
-  Spooky: '👻',
-  Christmas: '🎄',
-  Political: '🏛️',
+  Pun: "🧠",
+  Programming: "💻",
+  Misc: "🎲",
+  Dark: "🌑",
+  Spooky: "👻",
+  Christmas: "🎄",
+  Political: "🏛️",
   // Fallback icon
-  default: '😂',
+  default: "😂",
 };
 
 const JokeCard = ({ joke, setup, delivery, category, type, safe, id }) => {
@@ -23,30 +23,28 @@ const JokeCard = ({ joke, setup, delivery, category, type, safe, id }) => {
           <span>{category}</span>
         </span>
         {safe ? (
-          <span className="text-xs text-green-600 font-semibold">✅ Safe for work</span>
+          <span className="text-xs text-green-600 font-semibold">
+            ✅ Safe for work
+          </span>
         ) : (
-          <span className="text-xs text-red-600 font-semibold">⚠️ Not safe for work</span>
+          <span className="text-xs text-red-600 font-semibold">
+            ⚠️ Not safe for work
+          </span>
         )}
       </div>
 
       <div>
-        {type === 'single' ? (
-          <p className="text-lg text-gray-800 font-medium italic">
-            "{joke}"
-          </p>
+        {type === "single" ? (
+          <p className="text-lg text-gray-800 font-medium italic">"{joke}"</p>
         ) : (
           <>
-            <h3 className="text-lg font-semibold text-gray-800">
-              {setup}
-            </h3>
-            <p className="mt-2 text-gray-700">{delivery}</p>
+            <h3 className="text-lg font-semibold text-gray-800">{setup}</h3>
+            <p className="mt-2 text-gray-700"> Cause: {delivery}</p>
           </>
         )}
       </div>
 
-      <div className="text-right text-xs text-gray-500">
-        Joke ID: #{id}
-      </div>
+      <div className="text-right text-xs text-gray-500">Joke ID: #{id}</div>
     </div>
   );
 };
