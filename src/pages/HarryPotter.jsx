@@ -19,7 +19,7 @@ const HarryPotter = () => {
   }, []);
   return (
     <>
-      <h1>Harry Potter Charecters</h1>
+      <h1 className="flex justify-center text-3xl mt-2 mask-linear-from-inherit">Harry Potter Charecters</h1>
       <div className="flex flex-wrap gap-2">
         {data.map(function (elem, idx) {
           return (
