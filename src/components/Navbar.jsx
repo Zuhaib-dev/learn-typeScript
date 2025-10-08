@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center text-2xl gap-5 mt-10">
+    <div className="flex justify-center text-2xl gap-5 mt-10  ">
       <NavLink className={(e) => (e.isActive ? "text-rose-500" : "")} to={"/"}>
         Home
       </NavLink>
@@ -60,6 +60,12 @@ const Navbar = () => {
         to={"/memes"}
       >
         Memes
+      </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/todo"}
+      >
+        To-Do
       </NavLink>
     </div>
   );
