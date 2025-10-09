@@ -8,7 +8,10 @@ const CatCard = ({ id, url, width, height }) => {
     >
       <div className="relative">
         <img
-          src={url}
+          src={
+            url ||
+            'https://userimg.tellonym.me/lg-v2/93606150_atgyuprli2fmojqatjqcjukldwbio0qz.jpg'
+          }
           alt={`Cat image ${id}`}
           className="w-full h-auto object-cover rounded-t-xl transition-transform duration-500 transform hover:scale-110"
         />
