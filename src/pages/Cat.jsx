@@ -3,26 +3,50 @@ import React, { useEffect, useState } from "react";
 import CatCard from "../components/CatCard";
 
 const Cat = () => {
-  const [data, setdata] = useState([]);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true); // Add a loading state
+
   const getData = async () => {
     try {
       const response = await axios.get(
         "https://api.thecatapi.com/v1/images/search?limit=10"
       );
-      setdata(response.data);
+      setData(response.data);
+      setLoading(false); // Set loading to false after data is fetched
     } catch (error) {
       console.log(error);
+      setLoading(false); // Set loading to false even if there's an error
     }
   };
+
   useEffect(() => {
     getData();
   }, []);
+
   return (
     <>
-      <h1 className="flex justify-center text-3xl mt-3 mb-2 mask-radial-from-inherit">Cute Cat🙀 </h1>
+      <h1 className="flex justify-center text-3xl mt-3 mb-2 mask-radial-from-inherit">
+        Cute Cat🙀{" "}
+      </h1>
       <div className="flex justify-center flex-wrap">
-        {data.map((cat, index) => {
-          return (
+        {loading ? (
+          <div className="flex justify-center flex-wrap">
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+            <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
+          </div>
+        ) : (
+          // Once data is loaded, display the cat cards
+          data.map((cat, index) => (
             <CatCard
               key={index}
               url={cat.url}
@@ -30,8 +54,8 @@ const Cat = () => {
               width={cat.width}
               height={cat.height}
             />
-          );
-        })}
+          ))
+        )}
       </div>
     </>
   );
