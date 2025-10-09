@@ -1,21 +1,21 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
-import CatCard from "../components/CatCard";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import CatCard from '../components/CatCard';
 
 const Cat = () => {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true); // Add a loading state
+  const [loading, setLoading] = useState(true);
 
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://api.thecatapi.com/v1/images/search?limit=10"
+        'https://api.thecatapi.com/v1/images/search?limit=10',
       );
       setData(response.data);
-      setLoading(false); // Set loading to false after data is fetched
+      setLoading(false);
     } catch (error) {
       console.log(error);
-      setLoading(false); // Set loading to false even if there's an error
+      setLoading(false);
     }
   };
 
@@ -26,7 +26,7 @@ const Cat = () => {
   return (
     <>
       <h1 className="flex justify-center text-3xl mt-3 mb-2 mask-radial-from-inherit">
-        Cute Cat🙀{" "}
+        Cute Cat🙀{' '}
       </h1>
       <div className="flex justify-center flex-wrap">
         {loading ? (
@@ -45,7 +45,6 @@ const Cat = () => {
             <div className="animate-pulse w-48 h-48 bg-gray-300 rounded-md m-2"></div>
           </div>
         ) : (
-          // Once data is loaded, display the cat cards
           data.map((cat, index) => (
             <CatCard
               key={index}
