@@ -11,6 +11,7 @@ import HarryPotter from '../pages/HarryPotter'
 import GameOfThrones from '../pages/GameOfThrones'
 import Memes from '../pages/Memes'
 import TodoPage from '../pages/TodoPage'
+import Cat from '../pages/Cat'
 
 const MainRoutes = () => {
   return (
@@ -26,6 +27,7 @@ const MainRoutes = () => {
       <Route path="/got" element={<GameOfThrones />} />
       <Route path="/memes" element={<Memes />} />
       <Route path="/todo" element={<TodoPage />} />
+      <Route path="/cat" element={<Cat />} />
     </Routes>
   )
 }
