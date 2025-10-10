@@ -39,7 +39,7 @@ const JokeCard = ({ joke, setup, delivery, category, type, safe, id }) => {
         ) : (
           <>
             <h3 className="text-lg font-semibold text-gray-800">{setup}</h3>
-            <p className="mt-2 text-gray-700"> Answer: {delivery}</p>
+            <p className="mt-2 text-gray-700"> {delivery}</p>
           </>
         )}
       </div>
