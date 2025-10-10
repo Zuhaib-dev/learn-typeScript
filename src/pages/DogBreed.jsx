@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 const DogBreedCard = ({ breed, image }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-xl transform transition duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center space-y-6">
-      <div className="w-56 h-56 rounded-lg overflow-hidden shadow-md">
+      <div className="w-86 h-86 rounded-lg overflow-hidden shadow-md">
         <img
           src={image}
           alt={breed}
@@ -22,7 +22,7 @@ const DogBreedCard = ({ breed, image }) => {
 };
 
 const DogBreed = () => {
-  const { register, handleSubmit, setValue, reset } = useForm();
+  const { register, handleSubmit, setValue } = useForm();
   const [suggestions, setSuggestions] = useState([]);
   const [dogImage, setDogImage] = useState('');
   const [breed, setBreed] = useState('');
@@ -73,7 +73,6 @@ const DogBreed = () => {
   const onSubmit = (data) => {
     setSuggestions([]);
     fetchDogImage(data.query.toLowerCase());
-    reset();
   };
 
   return (
@@ -91,9 +90,6 @@ const DogBreed = () => {
 
       {/* Search Form */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 relative ">
-        <h1 className="text-3xl flex justify-center mask-radial-from-inherit">
-          Search For A Dog Breed
-        </h1>
         <input
           type="text"
           autoComplete="off"
@@ -122,10 +118,7 @@ const DogBreed = () => {
         <div className="flex justify-center">
           <button
             type="submit"
-            className="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
-            style={{
-              animation: 'pulse 1.5s infinite',
-            }}
+            className="px-6 py-3 bg-rose-600 text-white rounded-lg shadow-md hover:bg-rose-700 transition duration-300"
           >
             Search
           </button>
@@ -133,13 +126,6 @@ const DogBreed = () => {
       </form>
 
       {/* Inline Pulse Animation */}
-      <style>{`
-        @keyframes pulse {
-          0% { transform: scale(1); }
-          50% { transform: scale(1.05); }
-          100% { transform: scale(1); }
-        }
-      `}</style>
     </div>
   );
 };
