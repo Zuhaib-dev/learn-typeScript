@@ -12,6 +12,7 @@ import GameOfThrones from '../pages/GameOfThrones'
 import Memes from '../pages/Memes'
 import TodoPage from '../pages/TodoPage'
 import Cat from '../pages/Cat'
+import DogBreed from '../pages/DogBreed'
 
 const MainRoutes = () => {
   return (
@@ -28,6 +29,7 @@ const MainRoutes = () => {
       <Route path="/memes" element={<Memes />} />
       <Route path="/todo" element={<TodoPage />} />
       <Route path="/cat" element={<Cat />} />
+      <Route path="/dog" element={<DogBreed />} />
     </Routes>
   )
 }

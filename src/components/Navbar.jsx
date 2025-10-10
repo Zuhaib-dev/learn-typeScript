@@ -73,6 +73,12 @@ const Navbar = () => {
       >
         Cats
       </NavLink>
+      <NavLink
+        className={(e) => (e.isActive ? "text-rose-500" : "")}
+        to={"/dog"}
+      >
+        Dog
+      </NavLink>
     </div>
   );
 };
