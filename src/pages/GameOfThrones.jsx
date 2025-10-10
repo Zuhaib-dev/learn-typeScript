@@ -20,10 +20,9 @@ const GameOfThrones = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-3xl mask-linear-from-inherit">
+      <h1 className="flex justify-center text-3xl mask-linear-from-inherit mt-4 mb-4">
         Game Of Thrones
       </h1>
-      <h2 className="flex justify-center text-2xl from-neutral-200">All Charecters</h2>
       <div className="flex flex-wrap px-20 gap-4">
         {data.map(function (elem, idx) {
           return (

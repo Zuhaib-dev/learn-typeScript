@@ -17,7 +17,7 @@ const TodoPage = () => {
   };
   return (
     <div>
-      <h1 className="flex justify-center text-3xl mt-10 mb-4">Create To-Do</h1>
+      <h1 className="flex justify-center text-3xl mt-10 mb-4 mask-radial-from-inherit" >Create To-Do</h1>
       <CreateTodo onAddTodos={handleAddTodo} />
       <ListTodo todos={todos} />
     </div>

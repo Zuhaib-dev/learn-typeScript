@@ -19,7 +19,7 @@ const Burger = () => {
   }, []);
   return (
     <>
-      <h1 className="flex justify-center text-3xl mt-4 mb-2">Bob's Burgers</h1>
+      <h1 className="flex justify-center text-3xl mt-4 mb-2 mask-radial-from-inherit">Bob's Burgers</h1>
       <div className="flex flex-wrap">
         {data.map(function (elem, idx) {
           return (

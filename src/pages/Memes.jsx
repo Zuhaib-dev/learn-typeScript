@@ -17,7 +17,7 @@ const Memes = () => {
   }, []);
   return (
     <>
-      <h1 className="text-3xl flex justify-center mask-linear-from-inherit mt-4 mb-4">Memes</h1>
+      <h1 className="text-3xl flex justify-center mask-linear-from-inherit mt-4 mb-4">Memes Template</h1>
       <div className="flex flex-wrap px-20 gap-4">
         {data.map(function (elem, idx) {
           return (

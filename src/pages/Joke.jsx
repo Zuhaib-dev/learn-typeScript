@@ -21,7 +21,7 @@ const Joke = () => {
   }, []);
   return (
     <>
-      <h1 className="flex justify-center text-3xl mask-linear-from-inherit mt-4">Some Random Jokes</h1>
+      <h1 className="flex justify-center text-3xl mask-linear-from-inherit mt-4 mb-2">Some Random Jokes</h1>
       <div className="flex flex-wrap">
         {data.map(function (elem, idx) {
           return (

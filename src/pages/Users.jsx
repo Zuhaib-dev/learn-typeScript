@@ -18,7 +18,7 @@ const Users = () => {
   return (
     <>
       <h1 className="flex justify-center text-3xl mt-4">List Of All Users</h1>
-      <div className="flex flex-wrap ">
+      <div className="flex flex-wrap px-10 ">
         {data.map(function (elem, idx) {
           return (
             <UserCard

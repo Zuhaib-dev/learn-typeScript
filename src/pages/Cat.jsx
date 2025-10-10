@@ -25,8 +25,8 @@ const Cat = () => {
 
   return (
     <>
-      <h1 className="flex justify-center text-3xl mt-3 mb-2 mask-radial-from-inherit">
-        Cute Cat🙀{' '}
+      <h1 className="flex justify-center text-3xl mt-3 mb-4 mask-radial-from-inherit">
+        Cute Cats 🙀
       </h1>
       <div className="flex justify-center flex-wrap">
         {loading ? (

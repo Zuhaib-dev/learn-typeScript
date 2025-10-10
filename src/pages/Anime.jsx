@@ -1,13 +1,13 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import AnimeCard from "../components/AnimeCard";
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import AnimeCard from '../components/AnimeCard';
 
 const Anime = () => {
   const [data, setdata] = useState([]);
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://dragonball-api.com/api/characters"
+        'https://dragonball-api.com/api/characters',
       );
       console.log(response.data.items);
       setdata(response.data.items);
@@ -21,7 +21,9 @@ const Anime = () => {
 
   return (
     <>
-      <h1 className="text-3xl flex justify-center mt-4 ">List Of All Anime Charecters</h1>
+      <h1 className="text-3xl flex justify-center mt-4 mb-5 ">
+        List Of All Anime Charecters
+      </h1>
       <div className="flex flex-wrap">
         {data.map(function (elem, idx) {
           return (
