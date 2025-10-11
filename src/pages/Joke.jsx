@@ -7,11 +7,11 @@ const Joke = () => {
   const getData = async () => {
     try {
       const response = await axios.get(
-        "https://v2.jokeapi.dev/joke/Any?amount=10"
+        "https://official-joke-api.appspot.com/jokes/random/100"
       );
-      console.log(response.data.jokes);
+      console.log(response.data);
 
-      setdata(response.data.jokes);
+      setdata(response.data);
     } catch (error) {
       console.log(error);
     }
@@ -28,7 +28,7 @@ const Joke = () => {
             <JokeCard
               key={idx}
               setup={elem.setup}
-              delivery={elem.delivery}
+              delivery={elem.punchline}
               category={elem.category}
               id={elem.id}
               safe={elem.safe}
