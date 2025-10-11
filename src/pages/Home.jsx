@@ -6,7 +6,7 @@ const Home = () => {
   const [data, setdata] = useState([]);
   const getData = async () => {
     try {
-      const response = await axios.get("https://api.quotable.io/quotes/random");
+      const response = await axios.get("https://api.realinspire.live/v1/quotes/random");
       console.log(response.data);
       setdata(response.data);
     } catch (error) {
