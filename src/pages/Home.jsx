@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <>
       <h1 className="flex justify-center text-3xl mask-radial-from-neutral-300">
-        Some Qoutes
+         Qoutes to Get With
       </h1>
       <div >
         {data.map(function (elem, idx) {
