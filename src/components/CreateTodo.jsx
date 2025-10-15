@@ -1,8 +1,13 @@
-import React from "react";
-import { useForm } from "react-hook-form";
+import React from 'react';
+import { useForm } from 'react-hook-form';
 
 const CreateTodo = ({ onAddTodos }) => {
-  const { register, handleSubmit, reset,formState:{errors} } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const onSubmit = (data) => {
     if (data.todo) {
       onAddTodos(data.todo);
@@ -18,11 +23,17 @@ const CreateTodo = ({ onAddTodos }) => {
         className="outline-0 rounded-2xl text-2xl px-4 py-2"
         type="text"
         placeholder="Enter Title🤞"
-        {...register("todo")}
+        {...register('todo')}
       />
-      {errors.todo && <span className="flex text-red-400">This Field is required</span>}
-      <button className="bg-rose-500 px-4 py-2 rounded-2xl active:scale-90 text-white
-       hover:bg-rose-600 ">Add Todo</button>
+      {errors.todo && (
+        <span className="flex text-red-400">This Field is required</span>
+      )}
+      <button
+        className="bg-rose-500 px-4 py-2 rounded-2xl active:scale-90 text-white
+       hover:bg-rose-600 "
+      >
+        Add Todo
+      </button>
     </form>
   );
 };
