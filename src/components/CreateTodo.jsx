@@ -32,7 +32,7 @@ const CreateTodo = ({ onAddTodos }) => {
         className="bg-rose-500 px-4 py-2 rounded-2xl active:scale-90 text-white
        hover:bg-rose-600 "
       >
-        Add Todo
+        Add ToDo
       </button>
     </form>
   );
